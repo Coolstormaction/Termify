@@ -11,4 +11,6 @@ console.print(f'{os_}@{osname.capitalize()}', end='')
 inp = input('')
 
 if inp == 'ls': 
-    console.print('test success!')
+    for i in os.listdir(): 
+        if i == '.git': continue
+        if os.path.isfile(i): print('path is file')
