@@ -7,10 +7,10 @@ os_ = platform.system()
 osname = os.name
 console = Console()
 
-print(pyfiglet.figlet_format('TERMIFY'))
-console.print(f'{os_}@{osname.capitalize()}')
 
 while True:
+    print(pyfiglet.figlet_format('TERMIFY'))
+    console.print(f'{os_}@{osname.capitalize()}')
     inp = input('')
     if inp == 'ls': 
         for i in os.listdir(): 
