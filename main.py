@@ -9,9 +9,9 @@ console = Console()
 
 print(pyfiglet.figlet_format('TERMIFY'))
 console.print(f'{os_}@{osname.capitalize()}')
-inp = input('')
 
 while True:
+    inp = input('')
     if inp == 'ls': 
         for i in os.listdir(): 
             try: 
@@ -37,5 +37,10 @@ while True:
         dirToBeCreated = inp.split()[1]
         os.mkdir(dirToBeCreated)
 
+        console.print('success')
+
+    if inp.startswith('echo '):
+        echoed = inp.split()[1]
+        console.print(echoed)
+
     
-        
