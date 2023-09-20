@@ -10,7 +10,7 @@ console = Console()
 
 while True:
     print(pyfiglet.figlet_format('TERMIFY'))
-    console.print(f'{os_}@{osname.capitalize()}')
+    console.print(f'{os_.lower()}@{osname})')
     inp = input('')
     if inp == 'ls': 
         for i in os.listdir(): 
@@ -41,6 +41,6 @@ while True:
 
     if inp.startswith('echo '):
         echoed = inp.split()[1]
-        console.print(echoed)
+        console.print(f'{echoed}')
 
     
