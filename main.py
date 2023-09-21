@@ -43,4 +43,8 @@ while True:
         echoed = inp.split()[1]
         console.print(f'{echoed}')
 
+    if inp.startswith('touch '):
+        filename = inp.split()[1]
+        console.print()
     
+    if inp.startswith('chmod '): ...
