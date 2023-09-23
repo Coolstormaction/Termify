@@ -10,7 +10,7 @@ console = Console()
 
 while True:
     print(pyfiglet.figlet_format('TERMIFY'))
-    console.print(f'{os_.lower()}@{osname})')
+    console.print(f'{os_.lower()}@{osname}')
     inp = input('')
     if inp == 'ls': 
         for i in os.listdir(): 
