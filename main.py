@@ -46,5 +46,5 @@ while True:
     if inp.startswith('touch '):
         filename = inp.split()[1]
         console.print()
+        with open(filename, 'w') as f: f.write('')
     
-    if inp.startswith('chmod '): ...
