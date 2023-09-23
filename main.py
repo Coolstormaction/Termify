@@ -29,7 +29,9 @@ while True:
 
     if inp.startswith('dl '): 
         deleteDir = inp.split()[1]
-        Path.rmdir(deleteDir)
+        
+        if os.path.isdir(deleteDir): Path.rmdir(deleteDir)
+        if os.path.isfile(deleteDir): os.remove(deleteDir)
 
         console.print('success!')
 
@@ -47,4 +49,7 @@ while True:
         filename = inp.split()[1]
         console.print()
         with open(filename, 'w') as f: f.write('')
-    
+
+    if inp.startswith('find '):
+        filename =  inp.split()[1]
+        
