@@ -52,4 +52,5 @@ while True:
 
     if inp.startswith('find '):
         filename =  inp.split()[1]
+        if os.path.exists(filename)
         
